@@ -84,7 +84,7 @@ function App() {
       </main>
 
       <footer className="app-footer">
-        <p>© {year} RealEstate • Dashboard MongoDB • Made for internal monitoring.</p>
+        <p>RealEstate • Dashboard MongoDB</p>
       </footer>
     </div>
   );
