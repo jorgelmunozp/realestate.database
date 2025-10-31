@@ -1,3 +1,4 @@
+import { TbSmartHome } from "react-icons/tb";
 import './App.scss';
 
 const charts = [
@@ -41,10 +42,12 @@ function App() {
     <div className="app-shell">
       <header className="app-header">
         <div className="brand">
-          <div className="brand-icon">RE</div>
+          <div className="brand-icon">
+            <TbSmartHome size={40} strokeWidth={2.25} />
+          </div>
           <div className="brand-text">
             <h1 className="title">RealEstate</h1>
-            <p className="subtitle">Visualización MongoDB (Atlas Charts)</p>
+            <p className="subtitle">MongoDB (Atlas Charts)</p>
           </div>
         </div>
         <div className="header-actions">

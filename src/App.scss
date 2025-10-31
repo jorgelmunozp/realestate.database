@@ -1,6 +1,5 @@
-/* =========================
-   Variables base
-   ========================= */
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+
 :root {
   --primary: #107ACC;
   --bg-body: #f4f6f9;
@@ -69,6 +68,7 @@ body {
 }
 
 .brand-text .title {
+  font-family: 'Carter One', cursive;
   font-size: 1.1rem;
   margin: 0;
 }
@@ -113,7 +113,7 @@ body {
   margin: 0 auto;
 }
 
-/* título + chips también en 1 columna */
+// título + chips también en 1 columna
 .section-head {
   display: flex;
   flex-direction: column;
@@ -148,9 +148,7 @@ body {
   color: #0f3a5d;
 }
 
-/* =========================
-   Grid de charts (1 sola columna SIEMPRE)
-   ========================= */
+// Grid de charts
 .charts-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -168,7 +166,6 @@ body {
   width: 100%;
 }
 
-/* como siempre será 1 columna, esto igual ocupa 100% */
 .chart-card-wide {
   grid-column: 1 / -1;
 }
@@ -202,24 +199,10 @@ body {
   background: #fff;
 }
 
-/* =========================
-   Footer
-   ========================= */
+// Footer
 .app-footer {
   text-align: center;
   font-size: 0.7rem;
   color: var(--text-muted);
   padding: 1.3rem 1rem 1.6rem;
-}
-
-/* =========================
-   Estilos legacy de CRA
-   ========================= */
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-link {
-  color: #61dafb;
 }
