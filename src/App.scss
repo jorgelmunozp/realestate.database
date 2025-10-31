@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+@import './assets/styles/scss/mixins/screen';
 
 :root {
   --primary: #107ACC;
@@ -13,9 +14,7 @@
   --shadow-md: 0 10px 35px rgba(0,0,0,0.08);
 }
 
-/* =========================
-   Global
-   ========================= */
+// Global
 body {
   margin: 0;
   background: var(--bg-body);
@@ -27,9 +26,7 @@ body {
   text-align: center;
 }
 
-/* =========================
-   Shell principal del dashboard
-   ========================= */
+// Shell principal del dashboard
 .app-shell {
   min-height: 100vh;
   display: flex;
@@ -37,15 +34,19 @@ body {
 }
 
 .app-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   background: #ffffff;
   padding: 1.1rem 1.5rem;
-  display: flex;
-  justify-content: space-between;
   align-items: center;
   box-shadow: var(--shadow-sm);
   position: sticky;
   top: 0;
   z-index: 10;
+
+  @include screen-md { padding: 1.1rem 0.25rem !important; }
+  @include screen-sm { padding: 1.1rem 0.125rem !important; justify-content: center; }
 }
 
 .brand {
@@ -55,11 +56,11 @@ body {
 }
 
 .brand-icon {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   background: rgba(16,122,204,0.12);
   border: 1.5px solid rgba(16,122,204,0.3);
-  border-radius: 14px;
+  border-radius: 50%;
   display: grid;
   place-items: center;
   font-weight: 600;
@@ -83,6 +84,8 @@ body {
   display: flex;
   gap: 0.8rem;
   align-items: center;
+
+  @include screen-sm { margin-top: 15px !important; }
 }
 
 .badge {
@@ -108,15 +111,17 @@ body {
 
 .content {
   flex: 1;
-  padding: 1.5rem 1rem 1.5rem 1rem;
-  width: min(100%, 1200px);
+  padding: 1.5rem 2.5rem 1.5rem 2.5rem;
   margin: 0 auto;
+
+  @include screen-sm { padding: 1.5rem 0.25rem 1.5rem 0.25rem; }
 }
 
 // título + chips también en 1 columna
 .section-head {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 1rem;
   margin-bottom: 1.5rem;
 }
@@ -124,18 +129,21 @@ body {
 .section-title {
   font-size: 1.1rem;
   margin-bottom: 0.25rem;
+  text-align: center;
 }
 
 .section-desc {
   margin: 0;
   font-size: 0.75rem;
   color: var(--text-muted);
+  text-align: center;
 }
 
 .chips {
   display: flex;
   gap: 0.6rem;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .chip {
@@ -148,12 +156,13 @@ body {
   color: #0f3a5d;
 }
 
-// Grid de charts
+// Contenedor de charts con FLEX
 .charts-grid {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-wrap: wrap;     // todas una debajo de otra
+  justify-content: center;
   gap: 1.25rem;
-  align-items: stretch;
+  width: 100%;
 }
 
 .chart-card {
@@ -163,11 +172,12 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 520px;
-  width: 100%;
+  width: 100%;                // ancho completo
 }
 
+// por si en tu JSX quedó alguna con la clase wide, que igual ocupe 100%
 .chart-card-wide {
-  grid-column: 1 / -1;
+  width: 100%;
 }
 
 .chart-card-header {
