@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/realestate.database/static/css/main.06881198.css",
+    "main.js": "/realestate.database/static/js/main.7b3e84df.js",
+    "static/js/453.9588a53d.chunk.js": "/realestate.database/static/js/453.9588a53d.chunk.js",
+    "index.html": "/realestate.database/index.html",
+    "main.06881198.css.map": "/realestate.database/static/css/main.06881198.css.map",
+    "main.7b3e84df.js.map": "/realestate.database/static/js/main.7b3e84df.js.map",
+    "453.9588a53d.chunk.js.map": "/realestate.database/static/js/453.9588a53d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.06881198.css",
+    "static/js/main.7b3e84df.js"
+  ]
+}
